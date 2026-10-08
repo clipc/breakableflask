@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Test Dockerfile
         run: |
-                    docker run --rm \
+          docker run --rm \
             -v "$PWD":/project \
             -v "$HOME/.cache/trivy":/root/.cache/ \
             aquasec/trivy:latest fs \
